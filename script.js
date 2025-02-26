@@ -13,18 +13,11 @@ let symbols = '`!@#$%^&*()_+=-'
 let passwordLen = Number(passwordLength.value)
 passwordLengthDisplay.textContent = passwordLen
 
-passwordLength.addEventListener("mousemove",event=>{
+passwordLength.addEventListener("input",event=>{
     passwordLengthDisplay.textContent = passwordLength.value
     passwordLen=passwordLength.value
 })
-passwordLength.addEventListener("touchmove",event=>{
-    passwordLengthDisplay.textContent = passwordLength.value
-    passwordLen=passwordLength.value
-})
-passwordLength.addEventListener("click",event=>{
-    passwordLengthDisplay.textContent = passwordLength.value
-    passwordLen=passwordLength.value
-})
+
 function generatePassword() {
     let choice = "";
     if (passwordType[0].checked)
