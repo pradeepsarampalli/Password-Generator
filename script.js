@@ -17,6 +17,10 @@ passwordLength.addEventListener("mousemove",event=>{
     passwordLengthDisplay.textContent = passwordLength.value
     passwordLen=passwordLength.value
 })
+passwordLength.addEventListener("touchmove",event=>{
+    passwordLengthDisplay.textContent = passwordLength.value
+    passwordLen=passwordLength.value
+})
 passwordLength.addEventListener("click",event=>{
     passwordLengthDisplay.textContent = passwordLength.value
     passwordLen=passwordLength.value
