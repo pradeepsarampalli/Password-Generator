@@ -9,7 +9,7 @@ let capitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let smalls = 'abcdefghijklmnopqrstuvwxyz'
 let symbols = '`!@#$%^&*()_+=-'
 
-console.log(passwordType)
+
 let passwordLen = Number(passwordLength.value)
 passwordLengthDisplay.textContent = passwordLen
 
@@ -32,17 +32,15 @@ function generatePassword() {
             }
         }
     }
-    console.log(choice);
     let password = '';
     for (let i = 0; i < passwordLen; i++) {
         password += choice[Math.floor(Math.random() * choice.length)];
     }
-    console.log(password);
     resultPassword.value = password;
 }
 
 function copyPassword(){
-    navigator.clipboard.writeText(resultPassword.textContent).then(()=>{
+    navigator.clipboard.writeText(resultPassword.value).then(()=>{
         alert("Password copied")
     }).catch(error=>{
         alert("failed to copy",error)
